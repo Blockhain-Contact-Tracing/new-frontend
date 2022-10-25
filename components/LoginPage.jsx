@@ -6,6 +6,7 @@ import {
     Image,
     ScrollView,
     TextInput,
+    Pressable,
 } from 'react-native'
 
 export default function LoginPage() {
@@ -21,8 +22,8 @@ export default function LoginPage() {
                 <View style={{ textAlign: 'center', paddingBottom: 30 }}>
                     <Image
                         style={{
-                            width: '100px',
-                            height: '100px',
+                            width: 100,
+                            height: 100,
                             resizeMode: 'contain',
                             paddingTop: 15,
                         }}
@@ -30,7 +31,7 @@ export default function LoginPage() {
                     />
                     <Text
                         style={{
-                            fontWeight: 600,
+                            fontWeight: '600',
                             fontSize: 25,
                             justifySelf: 'center',
                         }}
@@ -39,7 +40,7 @@ export default function LoginPage() {
                     </Text>
                 </View>
 
-                <button
+                <Pressable
                     style={{
                         backgroundColor: '#233447',
                         borderRadius: 50,
@@ -50,7 +51,7 @@ export default function LoginPage() {
                     }}
                 >
                     <Image
-                        style={{ width: '50px', height: '50px' }}
+                        style={{ width: 50, height: 50 }}
                         source={require('../assets/metamask-1.svg')}
                     />
                     <Text
@@ -62,7 +63,7 @@ export default function LoginPage() {
                     >
                         Login With Metamask
                     </Text>
-                </button>
+                </Pressable>
             </View>
         </ScrollView>
     )

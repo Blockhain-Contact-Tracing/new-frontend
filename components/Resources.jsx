@@ -1,5 +1,12 @@
 import React, { useState } from 'react'
-import { ImageBackground, Text, View, Image, ScrollView } from 'react-native'
+import {
+    ImageBackground,
+    Text,
+    View,
+    Image,
+    ScrollView,
+    Pressable,
+} from 'react-native'
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps'
 import CheckBox from '@react-native-community/checkbox'
 import { LinearGradient } from 'expo-linear-gradient'
@@ -12,9 +19,9 @@ const containerV = {
     textAlign: 'left',
     justifyContent: 'center',
     backgroundColor: '#0169a1',
-    display: 'grid',
-    gridTemplateColumns: '1fr 1fr',
-    gridGap: 10,
+    // display: 'grid',
+    // gridTemplateColumns: '1fr 1fr',
+    // gridGap: 10,
 }
 
 const containerV2 = {
@@ -25,9 +32,9 @@ const containerV2 = {
     textAlign: 'left',
     justifyContent: 'center',
     backgroundColor: '#44bd32',
-    display: 'grid',
-    gridTemplateColumns: '1fr 1fr',
-    gridGap: 10,
+    // display: 'grid',
+    // gridTemplateColumns: '1fr 1fr',
+    // gridGap: 10,
 }
 
 const container = {
@@ -46,9 +53,9 @@ const containerOuter = {
     shadowOpacity: 0.2,
     shadowRadius: 3,
     padding: 10,
-    display: 'grid',
-    gridTemplateColumns: '1fr 1fr',
-    gridTemplateRows: '1fr 1fr 1fr',
+    // display: 'grid',
+    // gridTemplateColumns: '1fr 1fr',
+    // gridTemplateRows: '1fr 1fr 1fr',
     gridGap: 10,
     justifyContent: 'center',
     borderRadius: 10,
@@ -68,7 +75,7 @@ export default function Resources() {
                     >
                         Vaccination Slot Booking
                     </Text>
-                    <button style={containerV}>
+                    <Pressable style={containerV}>
                         <View
                             style={{
                                 display: 'flex',
@@ -81,7 +88,7 @@ export default function Resources() {
                                 style={{
                                     paddingHorizontal: '10px',
                                     color: 'white',
-                                    fontWeight: 600,
+                                    fontWeight: '600',
                                 }}
                             >
                                 Book your vaccination slot by clicking here.
@@ -89,8 +96,8 @@ export default function Resources() {
                         </View>
                         <ImageBackground
                             style={{
-                                width: '120px',
-                                height: '90px',
+                                width: 120,
+                                height: 90,
                                 justifySelf: 'right',
                                 alignSelf: 'center',
                             }}
@@ -104,7 +111,7 @@ export default function Resources() {
                                 location={[0, 0.25, 1]}
                             ></LinearGradient>
                         </ImageBackground>
-                    </button>
+                    </Pressable>
                 </View>
 
                 <View style={{ paddingBottom: 20 }}>
@@ -117,7 +124,7 @@ export default function Resources() {
                     >
                         Vaccination Certificate
                     </Text>
-                    <button style={containerV2}>
+                    <Pressable style={containerV2}>
                         <View
                             style={{
                                 display: 'flex',
@@ -130,7 +137,7 @@ export default function Resources() {
                                 style={{
                                     paddingHorizontal: '10px',
                                     color: 'white',
-                                    fontWeight: 600,
+                                    fontWeight: '600',
                                 }}
                             >
                                 Download your vaccination certificate securely.
@@ -138,8 +145,8 @@ export default function Resources() {
                         </View>
                         <ImageBackground
                             style={{
-                                width: '90px',
-                                height: '90px',
+                                width: 90,
+                                height: 90,
                                 justifySelf: 'right',
                                 alignSelf: 'center',
                             }}
@@ -153,7 +160,7 @@ export default function Resources() {
                                 location={[0, 0.25, 1]}
                             ></LinearGradient>
                         </ImageBackground>
-                    </button>
+                    </Pressable>
                 </View>
 
                 <View style={{ paddingBottom: 20 }}>
@@ -166,21 +173,21 @@ export default function Resources() {
                     >
                         Helplines
                     </Text>
-                    <View style={containerOuter}>
-                        <View style={container}>
+                    <View style={{ containerOuter }}>
+                        <View style={{ container }}>
                             <Image
                                 style={{
                                     alignSelf: 'center',
-                                    width: '50px',
-                                    height: '50px',
-                                    borderRadius: '50%',
+                                    width: 50,
+                                    height: 50,
+                                    borderRadius: 50,
                                 }}
                                 source={require('../assets/helpline.jpg')}
                             />
-                            <Text style={{ fontWeight: 700, fontSize: 20 }}>
+                            <Text style={{ fontWeight: '700', fontSize: 20 }}>
                                 1075
                             </Text>
-                            <Text style={{ fontWeight: 600 }}>
+                            <Text style={{ fontWeight: '600' }}>
                                 Health Ministry Helpline
                             </Text>
                         </View>
@@ -188,16 +195,16 @@ export default function Resources() {
                             <Image
                                 style={{
                                     alignSelf: 'center',
-                                    width: '50px',
-                                    height: '50px',
-                                    borderRadius: '50%',
+                                    width: 50,
+                                    height: 50,
+                                    borderRadius: 50,
                                 }}
                                 source={require('../assets/childHelpline.png')}
                             />
-                            <Text style={{ fontWeight: 700, fontSize: 20 }}>
+                            <Text style={{ fontWeight: '700', fontSize: 20 }}>
                                 1098
                             </Text>
-                            <Text style={{ fontWeight: 600 }}>
+                            <Text style={{ fontWeight: '600' }}>
                                 Child Helpline
                             </Text>
                         </View>
@@ -205,16 +212,16 @@ export default function Resources() {
                             <Image
                                 style={{
                                     alignSelf: 'center',
-                                    width: '50px',
-                                    height: '50px',
-                                    borderRadius: '50%',
+                                    width: 50,
+                                    height: 50,
+                                    borderRadius: 50,
                                 }}
                                 source={require('../assets/mental.png')}
                             />
-                            <Text style={{ fontWeight: 700, fontSize: 15 }}>
+                            <Text style={{ fontWeight: '700', fontSize: 15 }}>
                                 08046110007
                             </Text>
-                            <Text style={{ fontWeight: 600 }}>
+                            <Text style={{ fontWeight: '600' }}>
                                 Mental Health Helpline
                             </Text>
                         </View>
@@ -222,16 +229,16 @@ export default function Resources() {
                             <Image
                                 style={{
                                     alignSelf: 'center',
-                                    width: '50px',
-                                    height: '50px',
-                                    borderRadius: '50%',
+                                    width: 50,
+                                    height: 50,
+                                    borderRadius: 50,
                                 }}
                                 source={require('../assets/senior.png')}
                             />
-                            <Text style={{ fontWeight: 700, fontSize: 18 }}>
+                            <Text style={{ fontWeight: '700', fontSize: 18 }}>
                                 14567
                             </Text>
-                            <Text style={{ fontWeight: 600 }}>
+                            <Text style={{ fontWeight: '600' }}>
                                 Senior Citizens Helpline
                             </Text>
                         </View>
@@ -239,16 +246,16 @@ export default function Resources() {
                             <Image
                                 style={{
                                     alignSelf: 'center',
-                                    width: '50px',
-                                    height: '50px',
-                                    borderRadius: '50%',
+                                    width: 50,
+                                    height: 50,
+                                    borderRadius: 50,
                                 }}
                                 source={require('../assets/ayush.jpg')}
                             />
-                            <Text style={{ fontWeight: 700, fontSize: 18 }}>
+                            <Text style={{ fontWeight: '700', fontSize: 18 }}>
                                 14443
                             </Text>
-                            <Text style={{ fontWeight: 600 }}>
+                            <Text style={{ fontWeight: '600' }}>
                                 Ayush COVID-19 Counselling Helpline
                             </Text>
                         </View>
@@ -256,16 +263,16 @@ export default function Resources() {
                             <Image
                                 style={{
                                     alignSelf: 'center',
-                                    width: '50px',
-                                    height: '50px',
-                                    borderRadius: '50%',
+                                    width: 50,
+                                    height: 50,
+                                    borderRadius: 50,
                                 }}
                                 source={require('../assets/was.jpg')}
                             />
-                            <Text style={{ fontWeight: 700, fontSize: 15 }}>
+                            <Text style={{ fontWeight: '700', fontSize: 15 }}>
                                 9013151515
                             </Text>
-                            <Text style={{ fontWeight: 600 }}>
+                            <Text style={{ fontWeight: '600' }}>
                                 MyGov WhatsApp Helpdesk
                             </Text>
                         </View>
