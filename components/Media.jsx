@@ -19,14 +19,14 @@ export default function Media() {
                 >
                     <Image
                         style={imgStyle}
-                        source={require('/assets/c1.png')}
+                        source={require('../assets/c1.png')}
                     />
                     <Text style={{ fontWeight: 600, marginBottom: 10 }}>
                         Coronavirus disease (COVID-19)
                     </Text>
                     <Image
                         style={imgStyle}
-                        source={require('./assets/c2.png')}
+                        source={require('../assets/c2.png')}
                     />
                     <Text style={{ fontWeight: 600 }}>
                         Pfizer’s New Covid-19 Booster Targeting Omicron Could Be

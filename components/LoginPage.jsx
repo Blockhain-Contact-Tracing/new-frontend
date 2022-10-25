@@ -26,7 +26,7 @@ export default function LoginPage() {
                             resizeMode: 'contain',
                             paddingTop: 15,
                         }}
-                        source={require('/assets/logo.png')}
+                        source={require('../assets/logo.png')}
                     />
                     <Text
                         style={{
@@ -51,7 +51,7 @@ export default function LoginPage() {
                 >
                     <Image
                         style={{ width: '50px', height: '50px' }}
-                        source={require('/assets/metamask-1.svg')}
+                        source={require('../assets/metamask-1.svg')}
                     />
                     <Text
                         style={{
