@@ -137,19 +137,20 @@ export default function Home() {
                     >
                         <Pressable
                             style={{
-                                justifyContent: 'center',
+                                justifyContent: 'space-between',
                                 alignItems: 'center',
                                 backgroundColor: '#dfe4ea',
-                                width: 100,
+                                width: "90%",
                                 height: 100,
                                 borderRadius: 10,
                                 display: 'flex',
-                                flexDirection: 'column',
+                                flexDirection: 'row',
                                 flex: 2,
                                 shadowColor: '#000000',
                                 shadowRadius: 3,
                                 shadowOpacity: 0.2,
-                                margin: 4,
+                                margin: 10,
+                                padding:10
                             }}
                         >
                             <Image
@@ -164,19 +165,20 @@ export default function Home() {
                         </Pressable>
                         <Pressable
                             style={{
-                                justifyContent: 'center',
+                                justifyContent: 'space-between',
                                 alignItems: 'center',
                                 backgroundColor: '#dfe4ea',
-                                width: 100,
+                                width: "90%",
                                 height: 100,
                                 borderRadius: 10,
                                 display: 'flex',
-                                flexDirection: 'column',
+                                flexDirection: 'row',
                                 flex: 2,
                                 shadowColor: '#000000',
                                 shadowRadius: 3,
                                 shadowOpacity: 0.2,
-                                margin: 4,
+                                margin: 10,
+                                padding:10
                             }}
                         >
                             <Image
@@ -191,19 +193,20 @@ export default function Home() {
                         </Pressable>
                         <Pressable
                             style={{
-                                justifyContent: 'center',
+                                justifyContent: 'space-between',
                                 alignItems: 'center',
                                 backgroundColor: '#dfe4ea',
-                                width: 100,
+                                width: "90%",
                                 height: 100,
                                 borderRadius: 10,
                                 display: 'flex',
-                                flexDirection: 'column',
+                                flexDirection: 'row',
                                 flex: 2,
                                 shadowColor: '#000000',
                                 shadowRadius: 3,
                                 shadowOpacity: 0.2,
-                                margin: 4,
+                                margin: 10,
+                                padding:10
                             }}
                         >
                             <Image
