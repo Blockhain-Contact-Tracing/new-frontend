@@ -10,28 +10,11 @@ import Media from './components/Media'
 import Updates from './components/Updates'
 import LoginPage from './components/LoginPage'
 
-function NavBar() {
-    return (
-        <Header
-            style={{
-                position: "sticky",
-                top: 0,
-                zIndex: 1,height:10
-            }}>
-            <Text>Settings!</Text>
-        </Header>
-    )
-}
-
-
-
 const Tab = createMaterialBottomTabNavigator()
 
 export default function App() {
     return (
-        <>
-            {/* <NavBar /> */}
-
+        
             <NavigationContainer>
                 <Tab.Navigator tabBarOptions={{
                     showLabel: false,
@@ -72,7 +55,7 @@ export default function App() {
                     />
                 </Tab.Navigator>
             </NavigationContainer>
-        </>
+        
     )
 }
 

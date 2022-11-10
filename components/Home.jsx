@@ -16,10 +16,11 @@ const styles = StyleSheet.create({
     },
 })
 
-function NavBar() {
+function NavBar()
+{
     return (
         <View
-            style={{flexDirection:'row',position: "sticky", justifyContent: "space-between", padding: 15, backgroundColor: "#99ffbb" }}
+            style={{flexDirection:'row', zIndex:1, position: "relative", justifyContent: "space-between", padding: 15, backgroundColor: "#99ffbb" }}
         >
             <Pressable>
                 <Image style={{width:24,height:24}} source={require('../assets/menu_icon.png')}/>
@@ -28,7 +29,6 @@ function NavBar() {
                 fontWeight: '400',
                 fontSize: 20,
             }}>BlocoWin</Text>
-            
         </View>
     )
 }
@@ -40,7 +40,7 @@ export default function Home() {
             <ScrollView style={{ backgroundColor: '#ffffff' }}>
                 <View>
                 <View
-          style={{ display: 'block', padding: 5, backgroundColor: '#bff4d8' }}>
+          style={{ display: 'flex', padding: 5, backgroundColor: '#bff4d8' }}>
           <View
             style={{
               display: 'flex',
@@ -51,32 +51,32 @@ export default function Home() {
             }}>
             <View
               style={{
-                display: 'grid',
+                // display: 'grid',
                 fontSize: 20,
                 paddingLeft: 10,
                 paddingTop: 20,
                 paddingBottom: 40,
-                gridTemplateColumns: '1fr 1fr',
-                gridGap: 1,
+                // gridTemplateColumns: '1fr 1fr',
+                // gridGap: 1,
               }}>
               <View style={{ display: 'flex', alignSelf: 'center' }}>
                 <Text
-                  style={{ fontWeight: 600, fontSize: 20, paddingBottom: 15 }}>
+                  style={{ fontWeight: '600', fontSize: 20, paddingBottom: 15 }}>
                   Virat Kohli
                 </Text>
                 <Text>Fully Vaccinated</Text>
                 <Text>
-                  with <b>Covaxin</b>
+                  with <Text style={{fontWeight:'bold'}}>Covaxin</Text>
                 </Text>
                 <Text>
-                  on <b>19th October 2022</b>
+                  on <Text style={{fontWeight:'bold'}}>19th October 2022</Text>
                 </Text>
               </View>
               <Image
                 style={{
-                  width: '100px',
-                  height: '100px',
-                  borderRadius: '50%',
+                  width: 100,
+                  height: 100,
+                  borderRadius: 50,
                   justifySelf: 'center',
                   alignSelf: 'center',
                 }}
@@ -85,8 +85,8 @@ export default function Home() {
             </View>
 
             <Text
-              style={{ display: 'block', paddingLeft: 10, paddingBottom: 5 }}>
-              *Eligible for booster dose in <b>36 days</b>
+              style={{ display: 'flex', paddingLeft: 10, paddingBottom: 5 }}>
+              *Eligible for booster dose in <Text style={{fontWeight:'bold'}}>36 days</Text>
             </Text>
           </View>
         </View>

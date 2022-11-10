@@ -4,22 +4,8 @@ import { Text, View, ScrollView, Image } from 'react-native'
 const imgStyle = {
     width: '100%',
     height: '300%',
-    border: '0.5px solid',
-    borderRadius: '5px'
-}
-
-function NavBar() {
-    return (
-        <View style={{ flexDirection: 'row', position: "sticky", justifyContent: "space-between", padding: 15, backgroundColor: "#99ffbb" }}>
-            <Pressable>
-                <Image style={{ width: 24, height: 24 }} source={require('../assets/menu_icon.png')} />
-            </Pressable>
-            <Text style={{
-                fontWeight: '400',
-                fontSize: 20,
-            }}>BlocoWin</Text>
-        </View>
-    )
+    // border: '0.5px solid',
+    borderRadius: 5
 }
 
 export default function Media() {
