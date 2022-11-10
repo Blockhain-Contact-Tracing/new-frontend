@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text, View, ScrollView } from 'react-native';
 
+
 export default function Updates() {
   return (
     <>
@@ -12,8 +13,12 @@ export default function Updates() {
           }}>
           <View style={{ paddingBottom: 20 }}>
             <Text
-              style={{ fontWeight: '600', fontSize: 18, paddingBottom: 10 }}>
+              style={{ fontWeight: '600', fontSize: 18, paddingBottom: 2 }}>
               COVID-19 Cases Overview
+            </Text>
+            <Text
+              style={{ fontWeight: '300', fontSize: 14, paddingBottom: 10 }}>
+              11 November 2022, Updated 3 hours, 24 minutes ago 
             </Text>
             <View style={{ backgroundColor: '#cff7e1', padding: 15 }}>
               <Text
@@ -34,10 +39,12 @@ export default function Updates() {
                 }}>
                 <View
                   style={{
+                    alignItems:'center',
                     backgroundColor: 'white',
                     display: 'flex',
                     flexDirection: 'column',
                     padding: 2,
+                    borderRadius:5
                   }}>
                   <Text>Confirmed</Text>
                   <Text style={{ fontWeight: 600, color: 'red' }}>19.4L</Text>
@@ -45,10 +52,12 @@ export default function Updates() {
                 </View>
                 <View
                   style={{
+                    alignItems:'center',
                     backgroundColor: 'white',
                     display: 'flex',
                     flexDirection: 'column',
                     padding: 2,
+                    borderRadius:5
                   }}>
                   <Text>Recovered</Text>
                   <Text style={{ fontWeight: 600, color: '#4cd137' }}>
@@ -60,10 +69,12 @@ export default function Updates() {
                 </View>
                 <View
                   style={{
+                    alignItems:'center',
                     backgroundColor: 'white',
                     display: 'flex',
                     flexDirection: 'column',
                     padding: 2,
+                    borderRadius:5
                   }}>
                   <Text>Deaths</Text>
                   <Text style={{ fontWeight: 600 }}>26291</Text>

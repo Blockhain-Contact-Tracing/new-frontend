@@ -10,23 +10,40 @@ import Media from './components/Media'
 import Updates from './components/Updates'
 import LoginPage from './components/LoginPage'
 
-function SettingsScreen() {
+function NavBar() {
     return (
-        <View
-            style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}
-        >
+        <Header
+            style={{
+                position: "sticky",
+                top: 0,
+                zIndex: 1,height:10
+            }}>
             <Text>Settings!</Text>
-        </View>
+        </Header>
     )
 }
+
+
 
 const Tab = createMaterialBottomTabNavigator()
 
 export default function App() {
     return (
         <>
+            {/* <NavBar /> */}
+
             <NavigationContainer>
-                <Tab.Navigator>
+                <Tab.Navigator tabBarOptions={{
+                    showLabel: false,
+                    style: {
+                        backgroundColor: "blue",
+                        marginBottom: 15,
+                        borderRadius: 15,
+                        marginHorizontal: 10,
+                        height: 60,
+                        position: 'absolute',
+                    }
+                }}>
                     <Tab.Screen
                         name="Home"
                         component={Home}

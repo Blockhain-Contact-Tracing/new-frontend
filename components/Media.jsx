@@ -8,10 +8,24 @@ const imgStyle = {
     borderRadius: '5px'
 }
 
+function NavBar() {
+    return (
+        <View style={{ flexDirection: 'row', position: "sticky", justifyContent: "space-between", padding: 15, backgroundColor: "#99ffbb" }}>
+            <Pressable>
+                <Image style={{ width: 24, height: 24 }} source={require('../assets/menu_icon.png')} />
+            </Pressable>
+            <Text style={{
+                fontWeight: '400',
+                fontSize: 20,
+            }}>BlocoWin</Text>
+        </View>
+    )
+}
+
 export default function Media() {
     return (
         <>
-            <ScrollView style={{ paddingTop:15, backgroundColor: '#ffffff' }}>
+            <ScrollView style={{ paddingTop: 15, backgroundColor: '#ffffff' }}>
                 <View
                     style={{
                         marginHorizontal: 25,
