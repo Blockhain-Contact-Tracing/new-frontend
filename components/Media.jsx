@@ -4,13 +4,14 @@ import { Text, View, ScrollView, Image } from 'react-native'
 const imgStyle = {
     width: '100%',
     height: '300%',
-    border: '1px solid',
+    border: '0.5px solid',
+    borderRadius: '5px'
 }
 
 export default function Media() {
     return (
         <>
-            <ScrollView style={{ backgroundColor: '#ffffff' }}>
+            <ScrollView style={{ paddingTop:15, backgroundColor: '#ffffff' }}>
                 <View
                     style={{
                         marginHorizontal: 25,
