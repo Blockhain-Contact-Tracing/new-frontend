@@ -1,10 +1,10 @@
-import React from 'react'
-import { Text, View } from 'react-native'
+import React,{useState} from 'react'
+import { Text, View, StatusBar } from 'react-native'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import { NavigationContainer } from '@react-navigation/native'
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs'
 
-import Home from './components/Home'
+import Home from './components/VaccinationBooking'
 import Resources from './components/Resources'
 import Media from './components/Media'
 import Updates from './components/Updates'
@@ -13,8 +13,10 @@ import LoginPage from './components/LoginPage'
 const Tab = createMaterialBottomTabNavigator()
 
 export default function App() {
+    const [hidden, setHidden] = useState(true);
     return (
-        
+        <>
+        <StatusBar hidden={hidden}/>
             <NavigationContainer>
                 <Tab.Navigator tabBarOptions={{
                     showLabel: false,
@@ -55,7 +57,7 @@ export default function App() {
                     />
                 </Tab.Navigator>
             </NavigationContainer>
-        
+        </>
     )
 }
 
