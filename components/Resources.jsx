@@ -38,6 +38,9 @@ const container = {
   borderRadius: 10,
   textAlign: 'center',
   justifyContent: 'center',
+  width: 150,
+  paddingBottom: 10,
+  alignItems: 'center'
 };
 
 const containerOuter = {
@@ -45,19 +48,21 @@ const containerOuter = {
   shadowOffset: { width: 0, height: 1 },
   shadowOpacity: 0.2,
   shadowRadius: 3,
-  padding: 10,
+  display: 'flex',
+  flexDirection: 'row',
+  flexWrap: 'wrap',
   // display: 'grid',
   // gridTemplateColumns: '1fr 1fr',
   // gridTemplateRows: '1fr 1fr 1fr',
   // gridGap: 10,
-  justifyContent: 'center',
   borderRadius: 10,
+  justifyContent: 'center'
 };
 
 function NavBar() {
   return (
     <View
-      style={{ flexDirection: 'row', position: "relative", justifyContent: "space-between", padding: 15, backgroundColor: "#99ffbb", zIndex:1  }}
+      style={{ flexDirection: 'row', position: "relative", justifyContent: "space-between", padding: 15, backgroundColor: "#99ffbb", zIndex: 1 }}
     >
       <Pressable>
         <Image style={{ width: 24, height: 24 }} source={require('../assets/menu_icon.png')} />
@@ -73,36 +78,35 @@ function NavBar() {
 export default function Resources() {
   return (
     <>
-      <NavBar/>
+      <NavBar />
       <ScrollView style={{ paddingTop: 15, backgroundColor: '#ffffff' }}>
         <View style={{ marginHorizontal: 25, paddingVertical: 10 }}>
           <View style={{ paddingBottom: 20 }}>
             <Text style={{ fontWeight: '600', paddingBottom: 10, fontSize: 18 }}>
               Vaccination Slot Booking
             </Text>
-            <Pressable style={containerV}>
-              <View
+            <Pressable style={{ 
+              display: 'flex',
+              flexDirection: 'row',
+              flexWrap: 'wrap',
+              backgroundColor: '#0169a1',
+              borderRadius: 10,
+              justifyContent: 'center',
+              alignItems:'center',
+              }}>
+              <Text
                 style={{
-                  display: 'flex',
-                  flex: 2,
-                  flexDirection: 'column',
-                  justifyContent: 'center',
+                  paddingHorizontal: 10,
+                  color: 'white',
+                  fontWeight: '600',
+                  width: 200
                 }}>
-                <Text
-                  style={{
-                    paddingHorizontal: 10,
-                    color: 'white',
-                    fontWeight: '600',
-                  }}>
-                  Book your vaccination slot by clicking here.
-                </Text>
-              </View>
+                Book your vaccination slot by clicking here.
+              </Text>
               <ImageBackground
                 style={{
                   width: 120,
                   height: 90,
-                  justifySelf: 'right',
-                  alignSelf: 'center',
                 }}
                 source={require('../assets/slotBooking.png')}>
                 <LinearGradient
@@ -119,34 +123,31 @@ export default function Resources() {
             <Text style={{ fontWeight: '600', paddingBottom: 10, fontSize: 18 }}>
               Vaccination Certificate
             </Text>
-            <Pressable style={containerV2}>
-              <View
-                style={{
-                  display: 'flex',
-                  flex: 2,
-                  flexDirection: 'column',
-                  justifyContent: 'center',
-                }}>
+            <Pressable style={{display: 'flex',
+              flexDirection: 'row',
+              flexWrap: 'wrap',
+              backgroundColor: '#44bd32',
+              borderRadius: 10,
+              justifyContent: 'center',
+              alignItems:'center',}}>
                 <Text
                   style={{
-                    paddingHorizontal: 10,
-                    color: 'white',
-                    fontWeight: '600',
+                  color: 'white',
+                  fontWeight: '600',
+                  width: 200,
+                  paddingHorizontal: 10,
                   }}>
                   Download your vaccination certificate securely.
                 </Text>
-              </View>
               <ImageBackground
                 style={{
-                  width: 90,
+                  width: 120,
                   height: 90,
-                  justifySelf: 'right',
-                  alignSelf: 'center',
                 }}
                 source={require('../assets/card.png')}>
                 <LinearGradient
                   colors={['#44bd32', 'transparent']}
-                  style={{ flex: 1, justifyContent: 'center' }}
+                  style={{ flex: 1, justifyContent: 'flex-end' }}
                   start={[0, 0]}
                   end={[1, 0]}
                   location={[0, 0.25, 1]}></LinearGradient>

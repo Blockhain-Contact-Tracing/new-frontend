@@ -1,21 +1,37 @@
 import React from 'react'
-import { Text, View, ScrollView, Image } from 'react-native'
+import { Text, View, ScrollView, Image, Pressable } from 'react-native'
 
 const imgStyle = {
-    width: '100%',
-    height: '300%',
-    // border: '0.5px solid',
+    resizeMode: 'contain',
     borderRadius: 5
+}
+
+function NavBar() {
+    return (
+        <View
+            style={{ flexDirection: 'row', position: "relative", justifyContent: "space-between", padding: 15, backgroundColor: "#99ffbb", zIndex: 1 }}
+        >
+            <Pressable>
+                <Image style={{ width: 24, height: 24 }} source={require('../assets/menu_icon.png')} />
+            </Pressable>
+            <Text style={{
+                fontWeight: '400',
+                fontSize: 20,
+            }}>BlocoWin</Text>
+        </View>
+    )
 }
 
 export default function Media() {
     return (
         <>
+            <NavBar />
             <ScrollView style={{ paddingTop: 15, backgroundColor: '#ffffff' }}>
                 <View
                     style={{
                         marginHorizontal: 25,
                         paddingVertical: 10,
+                        width: 350
                     }}
                 >
                     <Image

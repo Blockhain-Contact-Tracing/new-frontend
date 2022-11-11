@@ -1,10 +1,11 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import { Text, View, StatusBar } from 'react-native'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import { NavigationContainer } from '@react-navigation/native'
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs'
 
-import Home from './components/VaccinationBooking'
+import Home from './components/Home'
+import VaccinationBooking from './components/VaccinationBooking'
 import Resources from './components/Resources'
 import Media from './components/Media'
 import Updates from './components/Updates'
@@ -16,18 +17,10 @@ export default function App() {
     const [hidden, setHidden] = useState(true);
     return (
         <>
-        <StatusBar hidden={hidden}/>
+            <StatusBar hidden={hidden} />
             <NavigationContainer>
                 <Tab.Navigator tabBarOptions={{
-                    showLabel: false,
-                    style: {
-                        backgroundColor: "blue",
-                        marginBottom: 15,
-                        borderRadius: 15,
-                        marginHorizontal: 10,
-                        height: 60,
-                        position: 'absolute',
-                    }
+                    showLabel: true
                 }}>
                     <Tab.Screen
                         name="Home"
@@ -39,6 +32,13 @@ export default function App() {
                         component={Resources}
                         options={{
                             tabBarIcon: makeIconRender('bag-personal-outline'),
+                        }}
+                    />
+                    <Tab.Screen
+                        name="Booking"
+                        component={VaccinationBooking}
+                        options={{
+                            tabBarIcon: makeIconRender('account-clock-outline'),
                         }}
                     />
                     <Tab.Screen
@@ -63,6 +63,6 @@ export default function App() {
 
 function makeIconRender(name) {
     return ({ color, size }) => (
-        <MaterialCommunityIcons name={name} color={'#00d94a'} size={size} />
+        <MaterialCommunityIcons name={name} color={'#00d94a'} size={20} />
     )
 }
