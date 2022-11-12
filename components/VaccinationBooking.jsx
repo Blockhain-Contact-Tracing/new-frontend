@@ -1,12 +1,30 @@
 import React, { useState } from 'react'
-import { Text, View, ScrollView, Button, Platform, TextInput } from 'react-native'
+import { Text, View, ScrollView, Button, Platform, TextInput, Pressable, Image } from 'react-native'
 import DateTimePicker from '@react-native-community/datetimepicker';
+
+function NavBar() {
+    return (
+        <View
+            stickyHeaderIndices={[1]}
+            showsVerticalScrollIndicator={false}
+            style={{ flexDirection: 'row', zIndex: 1, position: "relative", justifyContent: "space-between", padding: 15, backgroundColor: "#99ffbb" }}
+        >
+            <Pressable>
+                <Image style={{ width: 24, height: 24 }} source={require('../assets/menu_icon.png')} />
+            </Pressable>
+            <Text style={{
+                fontWeight: '400',
+                fontSize: 20,
+            }}>BlocoWin</Text>
+        </View>
+    )
+}
 
 export default function VaccinationBooking() {
     const [date, setDate] = useState(new Date());
     const [mode, setMode] = useState('date');
     const [show, setShow] = useState(false);
-    const [text, setText] = useState('Empty');
+    const [text, setText] = useState('');
 
     const onChange = (event, selectedDate) => {
         const currentDate = selectedDate || date;
@@ -34,30 +52,76 @@ export default function VaccinationBooking() {
 
     return (
         <>
+            <NavBar />
             <ScrollView style={{ paddingTop: 15, backgroundColor: '#ffffff' }}>
                 <View style={{ marginHorizontal: 25, paddingVertical: 10 }}>
-                    <Text style={{ fontWeight: '600', paddingBottom: 10, fontSize: 18 }}>
+                    <Text style={{ fontWeight: '600', paddingBottom: 15, fontSize: 18 }}>
                         Vaccination Slot Booking
                     </Text>
-                    <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
-                        <Text style={{ fontWeight: 'bold',fontSize:15 }}>Date of Vaccination</Text>
-                        <View style={{ display: 'flex', flexDirection: 'row' }}>
-                            <TextInput placeholder={text} />
+
+
+
+                    <View style={{ paddingBottom: 20 }}>
+                        <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+                            <Text style={{ fontWeight: 'bold', fontSize: 15 }}>Name</Text>
+                            <View style={{ display: 'flex', flexDirection: 'row' }}>
+                                <TextInput style={{ borderColor: '#000000', width: 150, borderStyle: 'solid', borderWidth: 0.5, textAlign: 'center', borderRadius: 5 }} />
+                            </View>
                         </View>
-                    
                     </View>
-                    <Button style={{ width: 50 }} title='Date' onPress={() => showMode('date')}></Button>
-                    <Button style={{ width: 50 }} title='Time' onPress={() => showMode('time')}></Button>
-                    {show && (
-                        <DateTimePicker
-                            testID='dateTimePicker'
-                            value={date}
-                            mode={mode}
-                            is24Hour={true}
-                            display='default'
-                            onChange={onChange}
-                        />
-                    )}
+
+                    <View style={{ paddingBottom: 20 }}>
+                        <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+                            <Text style={{ fontWeight: 'bold', fontSize: 15 }}>Date of Birth (dd/mm/yyyy)</Text>
+                            <View style={{ display: 'flex', flexDirection: 'row' }}>
+                                <TextInput style={{ borderColor: '#000000', width: 150, borderStyle: 'solid', borderWidth: 0.5, textAlign: 'center', borderRadius: 5 }} />
+                            </View>
+                        </View>
+                    </View>
+
+                    <View style={{ paddingBottom: 20 }}>
+                        <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+                            <Text style={{ fontWeight: 'bold', fontSize: 15 }}>Gender</Text>
+                            <View style={{ display: 'flex', flexDirection: 'row' }}>
+                                <TextInput style={{ borderColor: '#000000', width: 150, borderStyle: 'solid', borderWidth: 0.5, textAlign: 'center', borderRadius: 5 }} />
+                            </View>
+                        </View>
+                    </View>
+
+                    <View style={{ paddingBottom: 20 }}>
+                        <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', paddingBottom: 5 }}>
+                            <Text style={{ fontWeight: 'bold', fontSize: 15 }}>Date of Vaccination</Text>
+                            <View style={{ display: 'flex', flexDirection: 'row' }}>
+                                <TextInput style={{ borderColor: '#000000', width: 150, borderStyle: 'solid', borderWidth: 0.5, textAlign: 'center', borderRadius: 5 }} placeholder={text} />
+                            </View>
+                        </View>
+                        <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-end' }}>
+                            <Button style={{ width: 50, marginRight: 50 }} title='Date' onPress={() => showMode('date')}></Button>
+                            <Button style={{ width: 50, marginRight: 50 }} title='Time' onPress={() => showMode('time')}></Button>
+                        </View>
+                        {show && (
+                            <DateTimePicker
+                                testID='dateTimePicker'
+                                value={date}
+                                mode={mode}
+                                is24Hour={true}
+                                display='default'
+                                onChange={onChange}
+                            />
+                        )}
+                    </View>
+
+                    <View style={{ paddingBottom: 20 }}>
+                        <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+                            <Text style={{ fontWeight: 'bold', fontSize: 15 }}>Venue</Text>
+                            <View style={{ display: 'flex', flexDirection: 'row' }}>
+                                <TextInput style={{ borderColor: '#000000', width: 150, borderStyle: 'solid', borderWidth: 0.5, textAlign: 'center', borderRadius: 5 }} />
+                            </View>
+                        </View>
+                    </View>
+
+                    <Button title='Submit' style={{justifyContent:'center'}}></Button>
+
                 </View>
             </ScrollView>
         </>

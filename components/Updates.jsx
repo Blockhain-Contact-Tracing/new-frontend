@@ -3,17 +3,19 @@ import { Text, View, ScrollView, Pressable, Image } from 'react-native';
 
 function NavBar() {
   return (
-    <View
-      style={{ flexDirection: 'row', position: "sticky", justifyContent: "space-between", padding: 15, backgroundColor: "#99ffbb", zIndex: 1 }}
-    >
-      <Pressable>
-        <Image style={{ width: 24, height: 24 }} source={require('../assets/menu_icon.png')} />
-      </Pressable>
-      <Text style={{
-        fontWeight: '400',
-        fontSize: 20,
-      }}>BlocoWin</Text>
-    </View>
+      <View
+          stickyHeaderIndices={[1]}
+          showsVerticalScrollIndicator={false}
+          style={{ flexDirection: 'row', zIndex: 1, position: "relative", justifyContent: "space-between", padding: 15, backgroundColor: "#99ffbb" }}
+      >
+          <Pressable>
+              <Image style={{ width: 24, height: 24 }} source={require('../assets/menu_icon.png')} />
+          </Pressable>
+          <Text style={{
+              fontWeight: '400',
+              fontSize: 20,
+          }}>BlocoWin</Text>
+      </View>
   )
 }
 

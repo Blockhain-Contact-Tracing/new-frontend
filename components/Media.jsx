@@ -9,7 +9,9 @@ const imgStyle = {
 function NavBar() {
     return (
         <View
-            style={{ flexDirection: 'row', position: "relative", justifyContent: "space-between", padding: 15, backgroundColor: "#99ffbb", zIndex: 1 }}
+            stickyHeaderIndices={[1]}
+            showsVerticalScrollIndicator={false}
+            style={{ flexDirection: 'row', zIndex: 1, position: "relative", justifyContent: "space-between", padding: 15, backgroundColor: "#99ffbb" }}
         >
             <Pressable>
                 <Image style={{ width: 24, height: 24 }} source={require('../assets/menu_icon.png')} />

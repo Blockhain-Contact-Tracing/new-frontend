@@ -25,6 +25,7 @@
     "react-native": "0.69.6",
     "react-native-cli": "^2.0.1",
     "react-native-date-picker": "^4.2.6",
+    "react-native-dropdown": "^0.0.6",
     "react-native-maps": "0.31.1",
     "react-native-web": "~0.18.7"
   },
