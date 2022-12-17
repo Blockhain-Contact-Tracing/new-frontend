@@ -17,3 +17,7 @@ web-build/
 artifacts 
 cache
 contract-abi.json
+
+coverage
+coverage.json
+typechain

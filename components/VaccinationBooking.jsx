@@ -7,16 +7,16 @@ import {
     Platform,
     TextInput,
     Pressable,
-    Image,
+    Image
 } from 'react-native'
 import DateTimePicker from '@react-native-community/datetimepicker'
-import {
-    vaccinecertiContract,
-    connectWallet,
-    // updateMessage,
-    loadCurrentDate,
-    getCurrentWalletConnected,
-} from './utils/interact.js'
+// import {
+//     vaccinecertiContract,
+//     connectWallet,
+//     // updateMessage,
+//     loadCurrentDate,
+//     getCurrentWalletConnected,
+// } from './utils/interact.js'
 
 function NavBar() {
     return (
@@ -29,7 +29,7 @@ function NavBar() {
                 position: 'relative',
                 justifyContent: 'space-between',
                 padding: 15,
-                backgroundColor: '#99ffbb',
+                backgroundColor: '#99ffbb'
             }}
         >
             <Pressable>
@@ -41,7 +41,7 @@ function NavBar() {
             <Text
                 style={{
                     fontWeight: '400',
-                    fontSize: 20,
+                    fontSize: 20
                 }}
             >
                 BlocoWin
@@ -101,7 +101,7 @@ export default function VaccinationBooking() {
     const onChange = async (event, selectedDate) => {
         if (!window.ethereum || address === null) {
             return {
-                status: '💡 Connect your Metamask wallet to update the message on the blockchain.',
+                status: '💡 Connect your Metamask wallet to update the message on the blockchain.'
             }
         }
         const currentDate = selectedDate || date
@@ -141,7 +141,7 @@ export default function VaccinationBooking() {
                         style={{
                             fontWeight: '600',
                             paddingBottom: 15,
-                            fontSize: 18,
+                            fontSize: 18
                         }}
                     >
                         Vaccination Slot Booking
@@ -152,7 +152,7 @@ export default function VaccinationBooking() {
                             style={{
                                 display: 'flex',
                                 flexDirection: 'row',
-                                justifyContent: 'space-between',
+                                justifyContent: 'space-between'
                             }}
                         >
                             <Text style={{ fontWeight: 'bold', fontSize: 15 }}>
@@ -161,7 +161,7 @@ export default function VaccinationBooking() {
                             <View
                                 style={{
                                     display: 'flex',
-                                    flexDirection: 'row',
+                                    flexDirection: 'row'
                                 }}
                             >
                                 <TextInput
@@ -171,7 +171,7 @@ export default function VaccinationBooking() {
                                         borderStyle: 'solid',
                                         borderWidth: 0.5,
                                         textAlign: 'center',
-                                        borderRadius: 5,
+                                        borderRadius: 5
                                     }}
                                 />
                             </View>
@@ -183,7 +183,7 @@ export default function VaccinationBooking() {
                             style={{
                                 display: 'flex',
                                 flexDirection: 'row',
-                                justifyContent: 'space-between',
+                                justifyContent: 'space-between'
                             }}
                         >
                             <Text style={{ fontWeight: 'bold', fontSize: 15 }}>
@@ -192,7 +192,7 @@ export default function VaccinationBooking() {
                             <View
                                 style={{
                                     display: 'flex',
-                                    flexDirection: 'row',
+                                    flexDirection: 'row'
                                 }}
                             >
                                 <TextInput
@@ -202,7 +202,7 @@ export default function VaccinationBooking() {
                                         borderStyle: 'solid',
                                         borderWidth: 0.5,
                                         textAlign: 'center',
-                                        borderRadius: 5,
+                                        borderRadius: 5
                                     }}
                                 />
                             </View>
@@ -214,7 +214,7 @@ export default function VaccinationBooking() {
                             style={{
                                 display: 'flex',
                                 flexDirection: 'row',
-                                justifyContent: 'space-between',
+                                justifyContent: 'space-between'
                             }}
                         >
                             <Text style={{ fontWeight: 'bold', fontSize: 15 }}>
@@ -223,7 +223,7 @@ export default function VaccinationBooking() {
                             <View
                                 style={{
                                     display: 'flex',
-                                    flexDirection: 'row',
+                                    flexDirection: 'row'
                                 }}
                             >
                                 <TextInput
@@ -233,7 +233,7 @@ export default function VaccinationBooking() {
                                         borderStyle: 'solid',
                                         borderWidth: 0.5,
                                         textAlign: 'center',
-                                        borderRadius: 5,
+                                        borderRadius: 5
                                     }}
                                 />
                             </View>
@@ -246,7 +246,7 @@ export default function VaccinationBooking() {
                                 display: 'flex',
                                 flexDirection: 'row',
                                 justifyContent: 'space-between',
-                                paddingBottom: 5,
+                                paddingBottom: 5
                             }}
                         >
                             <Text style={{ fontWeight: 'bold', fontSize: 15 }}>
@@ -255,7 +255,7 @@ export default function VaccinationBooking() {
                             <View
                                 style={{
                                     display: 'flex',
-                                    flexDirection: 'row',
+                                    flexDirection: 'row'
                                 }}
                             >
                                 <TextInput
@@ -265,7 +265,7 @@ export default function VaccinationBooking() {
                                         borderStyle: 'solid',
                                         borderWidth: 0.5,
                                         textAlign: 'center',
-                                        borderRadius: 5,
+                                        borderRadius: 5
                                     }}
                                     placeholder={text}
                                 />
@@ -275,7 +275,7 @@ export default function VaccinationBooking() {
                             style={{
                                 display: 'flex',
                                 flexDirection: 'row',
-                                justifyContent: 'flex-end',
+                                justifyContent: 'flex-end'
                             }}
                         >
                             <Button
@@ -306,7 +306,7 @@ export default function VaccinationBooking() {
                             style={{
                                 display: 'flex',
                                 flexDirection: 'row',
-                                justifyContent: 'space-between',
+                                justifyContent: 'space-between'
                             }}
                         >
                             <Text style={{ fontWeight: 'bold', fontSize: 15 }}>
@@ -315,7 +315,7 @@ export default function VaccinationBooking() {
                             <View
                                 style={{
                                     display: 'flex',
-                                    flexDirection: 'row',
+                                    flexDirection: 'row'
                                 }}
                             >
                                 <TextInput
@@ -325,7 +325,7 @@ export default function VaccinationBooking() {
                                         borderStyle: 'solid',
                                         borderWidth: 0.5,
                                         textAlign: 'center',
-                                        borderRadius: 5,
+                                        borderRadius: 5
                                     }}
                                 />
                             </View>
