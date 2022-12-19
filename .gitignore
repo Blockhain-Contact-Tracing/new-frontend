@@ -12,3 +12,12 @@ web-build/
 
 # macOS
 .DS_Store
+
+.env
+artifacts 
+cache
+contract-abi.json
+
+coverage
+coverage.json
+typechain
