@@ -73,3 +73,11 @@ web-build/
 dist/
 
 # @end expo-cli
+.env
+artifacts 
+cache
+contract-abi.json
+
+coverage
+coverage.json
+typechain
